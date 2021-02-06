@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+      <div class="create-subreddit-container">
+        <form class="post-form" [formGroup]="subredditForm">
+          <!--  (ngSubmit)="createSubreddit()"  Was pasted on above line-->
+          <div class="form-group">
+            <div class="create-subreddit-heading">Create Community</div>
+            <hr />
+            <input type="text" [formControlName]="'title'" class="form-control title" style="margin-top: 5px;" placeholder="Title">
+            <div *ngIf="!subredditForm.get('title').valid && (subredditForm.get('title').touched || subredditForm.get('title').dirty)">
+              <div *ngIf="(subredditForm.get('title').errors.required || subredditForm.get('title').errors.minlength || subredditForm.get('title').errors.maxlength)">
+                Title must be between 3-30 characters in length
+              </div>
+            </div>
+            <textarea type="text" [formControlName]="'description'" style="width: 100%; margin-top: 5px" class="form-control title"
+              placeholder="Description"></textarea>
+              <div *ngIf="!subredditForm.get('description').valid && (subredditForm.get('description').touched || subredditForm.get('description').dirty)">
+                <div *ngIf="(subredditForm.get('description').errors.required || subredditForm.get('description').errors.minlength || subredditForm.get('description').errors.maxlength)">
+                  Description must be between 5-255 characters in length
+                </div>
+              </div>
+            <div>
+              <div style="margin-top: 5px" class="float-right">
+                <button (click)="discard()" class="btnDiscard">Discard</button>
+                <button (click)="createSubreddit()" class="btnCreateSubreddit">Create</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <div class="sidebar">
+          <h5 class="guidelines">Posting to VIT Milan</h5>
+          <hr />
+          <ul>
+            <li>Remember the human</li>
+            <hr />
+            <li>Behave like you would in real life</li>
+            <hr />
+            <li>Don't spam</li>
+            <hr />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

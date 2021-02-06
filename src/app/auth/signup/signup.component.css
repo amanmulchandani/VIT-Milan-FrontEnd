@@ -1,0 +1,53 @@
+.signup-header{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.portrait{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    height: 75%;
+}
+
+.box{
+    width: 350px;
+    padding: 40px;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: #222222;
+    text-align: center;
+}
+
+.box-input{
+    margin: 30px auto;
+}
+
+.box input[type = "text"], .box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #BB86FC;
+    padding: 5px 15px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus{
+    width: 250px;
+    border-color: #3700B3;
+}
+
+.input-error{
+    color: red;
+    margin-top: 5px;
+}

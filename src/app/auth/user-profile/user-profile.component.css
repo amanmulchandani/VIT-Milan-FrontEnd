@@ -1,0 +1,38 @@
+.card{
+    background-color: black;
+    left: 50%;
+    right: 50%;
+    height: 200px;
+    width: 350px;
+    transform: translate(-50%, 20%);
+    filter: drop-shadow(0 20px 30px 0);
+    /* justify-content: center; */
+    border-radius: 20px;
+    
+}
+.username{
+    padding-top: 20px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.user-stats {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.posts, .comment{
+    display: block;
+    align-items: center;
+}
+
+.posts-text, .comments-text{
+    align-items: center;
+    padding-top: 5px 10px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #F2E7FE;
+}

@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+
+::-webkit-scrollbar {display:none;}
+
+body{
+    background-color: #2F303A;
+    margin-top: 70px;
+    height: 100%; 
+}
+
+.ellipse-1{
+  position: absolute;
+  left: 40px;
+  top: 55%;
+  width: 25%;
+  z-index: -1;
+}
+
+.ellipse-2{
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 22%;
+  z-index: -1;
+}
+
+.ellipse-3{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  z-index: -1;
+}
+
+.login, .sign-up {
+    padding-top: 15px;
+    background-color: transparent;
+    border-color: #0079D3;
+    color: #0079D3;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;  
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .login:hover, .sign-up:hover{
+    background-color: #0079D3;
+    border-color: #0079D3;
+    color: aliceblue;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }

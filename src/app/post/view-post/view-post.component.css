@@ -1,0 +1,91 @@
+.post-title{
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color:#cba1ff;
+}
+  
+  .subreddit-text {
+    font-weight: bold;
+    color: #cfd8dc;
+    font-style: oblique;
+  }
+
+  .gray{
+    color:#cfd8dc;
+    font-weight: 400;
+  }
+  
+  .username{
+      color: #3eb2ff;
+  }
+  
+  .post-text{
+      color: white;
+      margin-top: 10px;
+  }
+
+  .createComment, .createComment:focus{
+    background-color: #37474f;
+    border-color: black;
+    color: white;
+  }
+
+  .createComment::placeholder{
+    color: rgb(199, 199, 199);
+  }
+  
+  .post{
+      --post-line-color: #ccc;    
+      border: 1px solid  black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background-color:  #263238;
+      color: #878A8C;
+      position: relative;
+      border-radius: 14px;
+      padding: 5px;
+  }
+  
+  .comment{    
+      --post-line-color: #ccc;    
+      border: 1px solid black;    
+      margin-bottom: 10px;
+      overflow: hidden;
+      background-color: #37474f;
+      color: #eceff1;
+      font-weight: 300;
+      position: relative;
+      border-radius: 4px;
+      padding: 10px;
+  }
+
+  .comment-username{
+    font-weight: bold;
+    color: #3eb2ff;
+    text-decoration: none;
+  }
+
+  .btnDelete {
+    border: 1px solid red;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+  }
+
+  .delete-button{
+    display: flex;
+    justify-content: flex-end;
+  }

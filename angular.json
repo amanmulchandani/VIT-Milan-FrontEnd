@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "./node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -120,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "angular-vit-community-master"
+  "defaultProject": "angular-vit-community-master",
+  "cli": {
+    "analytics": "83fbcdd5-4716-4df5-a5a3-794e6f79e438"
+  }
 }

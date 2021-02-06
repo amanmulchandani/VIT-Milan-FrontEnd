@@ -1,0 +1,114 @@
+.create-subreddit-container {
+    margin-top: 10px;
+    --post-line-color: #ccc;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #263238;
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  .title{
+    background-color:  #37474f;
+    color: white;
+    border: 1px solid black;
+  }
+
+  .title::placeholder{
+    color: rgb(199, 199, 199);
+  }
+  
+  .create-subreddit-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 22px;
+    color: #cba1ff;
+    -ms-flex: 1;
+    flex: 1;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+  
+  .btnCreateSubreddit {
+    margin: 5px;
+    margin: 5px;
+    background-color: #0079D3;
+    color: aliceblue;
+    fill: #0079D3;
+    border: 1px solid #0079D3;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;    
+    opacity: 1;
+    width: 288px;
+    height: 34px;
+  }
+
+  .btnCreatePost:hover{
+    opacity: 0.8;
+  }
+
+  .btnDiscard {
+    margin: 5px;
+    fill:  #ba81ff;
+    border: 1px solid  #ba81ff;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+    width: 288px;
+    height: 34px;
+    margin-top: 5px;
+    color: #ba81ff;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+
+  .btnDiscard:hover{
+    /* opacity: 0.8; */
+    background-color:  #ba81ff;
+    color: white;
+    border: 1px solid   #ba81ff;
+  }
+  
+  .guidelines {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #17a2ff;
+  }
+  
+  .sidebar {
+    width: 312px;
+    height: 242px;
+    --post-line-color: #ccc;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #263238;
+    color: #cfd8dc;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

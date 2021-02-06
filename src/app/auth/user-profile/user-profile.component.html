@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="card">
+
+    <div class="username">
+      {{name}}
+    </div>
+    <hr>
+    <div class="user-stats">
+      <div class="posts" style="text-align: center;">
+        <span> {{postLength}} </span>
+        <p class="posts-text">Posts</p>
+      </div>
+
+        <div class="comment" style="text-align: center;">
+          <span> {{commentLength}} </span>
+          <p class="comments-text">Comments</p>
+        </div>
+    </div>
+  </div>
+  <hr />
+  <div style="color: white;">
+    Your Posts:
+  </div>
+  <app-post-tile [posts]="posts" [deleteFlag]="deleteFlag" [editFlag]="editFlag"></app-post-tile>
+
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+      <hr />
+      <div class="col-md-9">
+        <div class="row post">
+          <div class="col-md-1">
+            <app-vote-button [post]="post"></app-vote-button>
+          </div>
+          <div class="col-md-11">
+            <span>
+              <span class="subreddit-text">{{post?.subredditName}}</span>
+              <span> . Posted
+                <span> {{post?.duration}} </span>
+                by
+                <a class="username" routerLink="/user/{{post?.userName}}">{{post?.userName}}</a>
+              </span>
+            </span>
+            <hr />
+            <!-- <a routerLink="post.url" class="post-title">{{post?.postName}}</a> -->
+            <span class="post-title">{{post?.postName}}</span>
+            <div>
+              <p class="post-text" [innerHtml]="post?.description"></p>
+            </div>
+            <div class="post-comment">
+              <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+                <div class="form-group">
+                  <textarea class="form-control createComment" [formControlName]="'text'" placeholder="Your Thoughts?"></textarea>
+                </div>
+                <!-- Add 'login' class to below button -->
+                <button type="submit" class="float-right login">Comment</button>
+              </form>
+            </div>
+            <div style="margin-top: 60px;" *ngFor="let comment of comments">
+              <div class="comment">
+                <div class="comment-stats">
+                  <a routerLink="/user/{{comment.userName}}" class="comment-username">{{comment.userName}}</a>
+                  .
+                  <span class="gray">{{comment.duration}}</span>
+                </div>
+                <hr>
+                <b>{{comment.text}}</b>
+                <div class="delete-button">
+                  <button class="btnDelete btn-danger" (click)="confirmDelete(comment.id)" *ngIf="checkCommentUser(comment.userName)">
+                  Delete Comment
+                  </button>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <app-side-bar></app-side-bar>
+        <app-subreddit-side-bar></app-subreddit-side-bar>
+      </div>
+    </div>
+  </div>

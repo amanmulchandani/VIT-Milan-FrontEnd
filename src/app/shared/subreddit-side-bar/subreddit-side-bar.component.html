@@ -1,0 +1,11 @@
+<div class="sidebar-view-subreddit">
+    <div class="heading">Communities</div>
+    <hr />
+    <span *ngFor="let subreddit of subreddits">
+        <span><a class="subreddit-text" href="/view-subreddit/{{subreddit.id}}">{{subreddit.name}}</a></span>
+        <hr />
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll">
+        <a class="view-all" routerLink="/list-subreddits">View All</a>
+    </div>
+</div>

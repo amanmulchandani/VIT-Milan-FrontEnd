@@ -1,0 +1,70 @@
+.sidebar{
+    width: 312px;
+    height: 242px;
+    --post-line-color: #ccc;    
+    border: 1px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #263238;
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding:5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btnCreatePost{
+    margin: 5px;
+    background-color: #0079D3;
+    color: aliceblue;
+    fill: #0079D3;
+    border: 1px solid #0079D3;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;    
+    opacity: 1;
+    width: 288px;
+    height: 34px;
+}
+
+.btnCreateSubreddit{
+    background-color: transparent;
+    margin: 5px;
+    border: 1px solid  #ba81ff;
+    color:  #ba81ff;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;    
+    opacity: 1;
+    width: 288px;
+    height: 34px;
+    transition: 0.5s;
+}
+
+.btnCreateSubreddit:hover{
+    background-color: #ba81ff;
+    color: white;
+    /* opacity: 0.8; */
+}
+
+.sidebar>ul>li{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1c1c1c;
+}

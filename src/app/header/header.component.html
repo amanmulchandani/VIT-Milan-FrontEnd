@@ -1,0 +1,55 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="flex-grow-1">
+      <a aria-label="Home" class="logo" routerLink="/">
+        
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="reddit-icon-svg">
+          <rect width="100" height="100"/>
+          <circle cx="50" cy="50" r="47.5" stroke="url(#paint0_linear)" stroke-width="5"/>
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="25" width="84" height="50">
+          <line x1="10.5" y1="43.5" x2="10.5" y2="55.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="89.5" y1="43.5" x2="89.5" y2="55.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="75.5" y1="41.5" x2="75.5" y2="57.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="23.5" y1="40.5" x2="23.5" y2="59.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="63.5" y1="33.5" x2="63.5" y2="66.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="36.5" y1="33.5" x2="36.5" y2="66.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          <line x1="49.5" y1="27.5" x2="49.5" y2="72.5" stroke="black" stroke-width="5" stroke-linecap="round"/>
+          </mask>
+          <g mask="url(#mask0)">
+          <rect x="4" y="25" width="91" height="50" fill="url(#paint1_linear)"/>
+          </g>
+          <defs>
+          <linearGradient id="paint0_linear" x1="50" y1="11.25" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#164E90"/>
+          <stop offset="1" stop-color="#BC38A0"/>
+          </linearGradient>
+          <linearGradient id="paint1_linear" x1="49.5" y1="25" x2="49.5" y2="75" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#164E90"/>
+          <stop offset="1" stop-color="#BC38A0"/>
+          </linearGradient>
+          </defs>
+          </svg>
+          
+        <span class="reddit-text">
+          VIT<span>Milan</span>
+        </span>
+      </a>
+    </div>
+    <div class="flex-grow-1 float-right user-profile">
+      <div *ngIf="isLoggedIn" ngbDropdown class="float-right dropdown">
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button (click)="goToUserProfile()" ngbDropdownItem>Profile</button>
+            <button (click)="logout()" ngbDropdownItem>Logout</button>
+        </div>
+        <button class="userdetails" id="dropdownBasic1" ngbDropdownToggle>
+            <img class="account-icon" src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+            {{username}}
+        </button>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <a routerLink="/signup" class="float-right sign-up mr-2">Sign up</a>
+        <a routerLink="/login" class="float-right login mr-2">Login</a>
+      </div>
+    </div>
+  </nav>
+</header>

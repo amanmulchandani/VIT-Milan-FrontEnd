@@ -1,0 +1,45 @@
+
+<!-- Search Bar -->
+<div class="form-group">
+  <!-- <label for="search-text">Search Text</label> -->
+  <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+    [(ngModel)]="searchText" placeholder="Search title" 
+    autofocus>
+</div>
+          
+          <!-- Display Posts-->
+          <div class="row post" *ngFor="let post of posts | appFilter: searchText">
+            <app-vote-button [post]="post"></app-vote-button>
+            <!-- Section to Display Post Information-->
+            <div class="col-md-11">
+              <span>
+                <span class="subreddit-name posturl">{{post.subredditName}}</span>
+                <span> . Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span>
+                <span> . {{post.duration}}</span>
+              </span>
+              <hr />
+              <div class="post-title">
+                <!-- <a class="postname" href="{{post.url}}" *ngIf="post.url!=''">{{post.postName}}</a> -->
+                <p>{{post.postName}}</p>
+              </div>
+              <div>
+                <p class="post-text" [innerHtml]="post.description"></p>
+              </div>
+              <hr />
+              <span>
+                <span class="btnCommments" role="button" (click)="goToPost(post.id)">
+                  <fa-icon [icon]="faComments"></fa-icon>
+                  <a>View comments </a>({{post.commentCount}})
+                </span>
+                <!-- deletePost(post.id) -->
+                <div class="delete-button">
+                  <button class="btnDelete btn-primary" (click)="editPost(post.id)" *ngIf="editFlag">
+                    Edit Post
+                  </button>
+                  <button class="btnDelete btn-danger" (click)="confirmDelete(post.id)" *ngIf="deleteFlag">
+                    Delete Post
+                  </button>
+                </div>
+              </span>
+            </div>
+          </div>

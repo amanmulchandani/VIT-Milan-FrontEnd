@@ -1,0 +1,13 @@
+h2{
+    margin-top: 10px;
+    color: #F2E7FE;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.description{
+    margin: 5px;
+    color: whitesmoke;
+    text-align: center;
+    font-style: oblique;
+}
